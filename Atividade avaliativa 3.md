@@ -4,7 +4,7 @@ Este repositório contém o desenvolvimento de um experimento computacional para
 
 ---
 
-## 💻 Código do Experimento (Python)
+## Código do Experimento (Python)
 
 O código abaixo executa a ordenação e faz a contagem exata das operações de cada algoritmo, utilizando uma estrutura simplificada.
 
@@ -108,7 +108,7 @@ for tam in tamanhos:
 
 ---
 
-## 📊 Tabela de Resultados
+## Tabela de Resultados
 
 Os valores coletados durante a execução dos testes com dados aleatórios foram organizados na estrutura abaixo:
 
@@ -122,7 +122,7 @@ Os valores coletados durante a execução dos testes com dados aleatórios foram
 
 ---
 
-## 📝 Análise dos Resultados
+## Análise dos Resultados
 
 * **a) Qual algoritmo realizou o menor número de comparações para 10 elementos?**  
   O **Insertion Sort** realizou o menor número, somando apenas 27 comparações.
@@ -153,7 +153,7 @@ Os valores coletados durante a execução dos testes com dados aleatórios foram
 
 ---
 
-## ⚡ Desafio Adicional
+## Desafio Adicional
 
 A organização inicial do vetor modifica o comportamento dos códigos de maneiras distintas:
 
