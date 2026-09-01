@@ -125,31 +125,31 @@ Os valores coletados durante a execução dos testes com dados aleatórios foram
 ## Análise dos Resultados
 
 * **a) Qual algoritmo realizou o menor número de comparações para 10 elementos?**  
-  O **Insertion Sort** realizou o menor número, somando apenas 27 comparações.
+  O Insertion Sort realizou o menor número, somando apenas 27 comparações.
 
 * **b) Qual algoritmo realizou menos trocas ou movimentações?**  
-  O **Selection Sort** foi o que menos moveu elementos na memória, registrando apenas 7 trocas no tamanho 10 e mantendo esse padrão baixo mesmo para 1.000 elementos (992).
+  O Selection Sort foi o que menos moveu elementos na memória, registrando apenas 7 trocas no tamanho 10 e mantendo esse padrão baixo mesmo para 1.000 elementos (992).
 
 * **c) O comportamento observado para 10 elementos permaneceu semelhante quando o tamanho aumentou para 20?**  
   **Sim.** A proporção de crescimento continuou igual. O Selection seguiu com poucas trocas, o Insertion continuou eficiente em comparações dentro do grupo quadrático e o Quick Sort começou a se destacar.
 
 * **d) O que aconteceu com a quantidade de operações quando o vetor passou para 1.000 elementos?**  
-  Houve um **crescimento explosivo e muito alto** nos algoritmos quadráticos (Bubble, Insertion e Selection), alcançando centenas de milhares de operações. Em contraste, o Quick Sort manteve um número muito baixo (10.626 comparações).
+  Houve um crescimento explosivo e muito alto nos algoritmos quadráticos (Bubble, Insertion e Selection), alcançando centenas de milhares de operações. Em contraste, o Quick Sort manteve um número muito baixo (10.626 comparações).
 
 * **e) Bubble Sort, Insertion Sort e Selection Sort apresentam complexidade $O(n^2)$ em situações típicas. Eles apresentaram exatamente a mesma quantidade de operações?**  
-  **Não.** Mesmo pertencendo à mesma classe teórica, o comportamento prático muda. O Bubble e o Selection fazem o mesmo número de comparações, mas o Selection faz muito menos trocas. Já o Insertion diminui as comparações quase pela metade porque para de procurar assim que acha a posição correta.
+  Não. Mesmo pertencendo à mesma classe teórica, o comportamento prático muda. O Bubble e o Selection fazem o mesmo número de comparações, mas o Selection faz muito menos trocas. Já o Insertion diminui as comparações quase pela metade porque para de procurar assim que acha a posição correta.
 
 * **f) Qual algoritmo apresentou maior crescimento no número de operações?**  
-  O **Bubble Sort**, pois necessita fazer o limite máximo de comparações e executa um volume massivo de trocas a cada inversão encontrada.
+  O Bubble Sort, pois necessita fazer o limite máximo de comparações e executa um volume massivo de trocas a cada inversão encontrada.
 
 * **g) Como o comportamento experimental do Quick Sort se diferenciou dos demais algoritmos?**  
-  O Quick Sort cresceu de forma **linear-logarítmica**, sendo muito mais lento para acumular operações. Enquanto os outros passaram de 490 mil operações, o Quick resolveu com cerca de 10 mil.
+  O Quick Sort cresceu de forma linear-logarítmica, sendo muito mais lento para acumular operações. Enquanto os outros passaram de 490 mil operações, o Quick resolveu com cerca de 10 mil.
 
 * **h) Os resultados encontrados são coerentes com as complexidades teóricas estudadas?**  
-  **Sim.** Os três primeiros algoritmos seguiram a curva de crescimento quadrática ($n^2$), e o Quick Sort provou sua eficiência teórica seguindo a curva $O(n \log n)$.
+  Sim. Os três primeiros algoritmos seguiram a curva de crescimento quadrática ($n^2$), e o Quick Sort provou sua eficiência teórica seguindo a curva $O(n \log n)$.
 
-* **i) Se você fosse responsável pelo sistema da central de distribuição e precisasse ordenar milhares de pedidos, qual dos quatro algoritmos escolheria?**  
-  Eu escolheria o **Quick Sort**. Como sistemas reais manipulam grandes volumes de dados a todo momento, usar algoritmos quadráticos geraria lentidão e alto consumo de processamento. O Quick Sort garante respostas rápidas.
+* **i) Se você fosse responsável pelo sistema da central de distribuição e precisasse ordenar milhares de pedidos, qual dos quatro algoritmos escolheria?**
+  Eu escolheria o Quick Sort. Como sistemas reais manipulam grandes volumes de dados a todo momento, usar algoritmos quadráticos geraria lentidão e alto consumo de processamento. O Quick Sort garante respostas rápidas.
 
 ---
 
@@ -157,7 +157,7 @@ Os valores coletados durante a execução dos testes com dados aleatórios foram
 
 A organização inicial do vetor modifica o comportamento dos códigos de maneiras distintas:
 
-* **Vetor já ordenado:** O **Insertion Sort** se torna o melhor de todos, fazendo apenas $n-1$ comparações e zero movimentações. O Quick Sort com pivô fixo no final perde sua eficiência e cai para o pior caso ($O(n^2)$).
+* **Vetor já ordenado:** O Insertion Sort se torna o melhor de todos, fazendo apenas $n-1$ comparações e zero movimentações. O Quick Sort com pivô fixo no final perde sua eficiência e cai para o pior caso ($O(n^2)$).
 * **Vetor em ordem inversa:** O Bubble Sort e o Insertion Sort realizam o número máximo de operações possíveis. O Selection Sort mantém o mesmo número de comparações fixas do caso aleatório.
 
-**Conclusão:** A ordenação inicial dos dados **não interfere da mesma maneira** em todos os algoritmos. Alguns se beneficiam muito da pré-ordenação (como o Insertion), enquanto outros mantêm um trabalho rígido (Selection) ou até perdem rendimento (Quick Sort com pivô fixo).
+**Conclusão:** A ordenação inicial dos dados não interfere da mesma maneira em todos os algoritmos. Alguns se beneficiam muito da pré-ordenação (como o Insertion), enquanto outros mantêm um trabalho rígido (Selection) ou até perdem rendimento (Quick Sort com pivô fixo).
